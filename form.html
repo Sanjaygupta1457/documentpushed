@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        h5{
+            text-align: center;
+            color: orange;
+        }
+        h2{
+            text-align: center;
+
+        }
+        button{
+            width: 1000px;
+            background-color: orange;
+        }
+        input{
+            width: 1000px;
+        }
+       
+        fieldset{
+            width: 1002px;
+            margin-left: 225px;
+            margin-right: 225px;
+            border-color: orange;
+            border-radius: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="" id="form1" onsubmit="onsignup(event)">
+        <fieldset>
+        <h2>Book a Call</h2>
+        <h5>Book a call slot and our Representative will call you within 1hour of selected Time.</h5>
+        <hr>
+        <label for="fname">Name:</label><br>
+    <input type="text" id="fname" value="sanjay"><br>
+    <label for="Email">Email:</label><br>
+    <input type="email" id="email"><br>
+    <label for="Phone">Phone:</label><br>
+    <input type="number" id="Phone" maxlength="12"><br>
+    <label for="time & date">Time for Call:</label><br>
+    <input type="date" id="date" > <input type="time" id="time" ><br>
+    <button>GET A CALL.</button>
+    </fieldset>
+    </form>
+    <script>
+        function onsignup(event){
+           event.preventDefault();
+           var Name = document.getElementById("fname");
+           var email = document.getElementById("email");
+           var phone = document.getElementById("Phone");
+         
+           console.log("Name :"+Name.value+"\nemail :"+email.value+"\nphone :"+Phone.value);
+        }
+    </script>
+</body>
+</html>
